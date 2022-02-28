@@ -1,0 +1,30 @@
+<div class="row">
+  <div *ngIf="cars$| async as car" class="col-6 offset-3">
+    <form #carForm="ngForm" (ngSubmit)="onUpdate(car)">
+      <input [(ngModel)]="car.id" name="id" type="hidden">
+      <div class="form-group">
+        <label for="model-id">Model</label>
+        <input [(ngModel)]="car.model" id="model" name="model" type="text" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="make-id">Make</label>
+        <input [(ngModel)]="car.make" id="make" name="make" type="text" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="year-id">Year</label>
+        <input [(ngModel)]="car.year" id="city-id" name="year" type="text" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="price-id">Price</label>
+        <input [(ngModel)]="car.price" id="street-id" name="price" type="text" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="stock-id">Stock</label>
+        <input [(ngModel)]="car.stock" id="notes-id" name="stock" type="text" class="form-control" required>
+      </div>
+      <button class="btn btn-primary mx-2">
+        Save
+      </button>
+    </form>
+  </div>
+</div>
